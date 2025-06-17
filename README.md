@@ -1,12 +1,123 @@
-# React + Vite
+# React 后台管理系统
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 项目简介
 
-Currently, two official plugins are available:
+这是一个基于 React 开发的后台管理系统，提供了用户管理、权限控制等功能，适用于各类管理后台场景。系统采用了现代化的 UI 设计，具有良好的用户体验和交互效果。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 技术栈
 
-## Expanding the ESLint configuration
+- **前端框架**：React 19
+- **UI 组件库**：Ant Design
+- **路由管理**：React Router 6
+- **构建工具**：Vite
+- **数据模拟**：Mock.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 功能特性
+
+### 1. 用户认证
+- 登录页面
+- 权限控制
+- 自动登出（可配置）
+
+### 2. 用户管理
+- 用户列表展示
+- 用户搜索和筛选
+- 用户新增、编辑、删除
+- 表单验证
+
+### 3. 仪表盘
+- 数据概览
+- 用户统计
+
+### 4. 系统设置
+- 主题设置
+- 语言设置
+- 安全设置
+
+### 5. 权限管理
+- 基于角色的权限控制
+- 菜单权限控制
+- 路由权限控制
+
+## 目录结构
+
+```
+src/
+├── api/             # API 接口
+├── assets/          # 静态资源
+├── components/      # 公共组件
+├── context/         # 上下文管理
+├── hooks/           # 自定义钩子
+├── layouts/         # 布局组件
+├── mock/            # 模拟数据
+├── pages/           # 页面组件
+│   ├── Dashboard/     # 控制台页面
+│   ├── Login/         # 登录页面
+│   ├── Settings/      # 设置页面
+│   └── UserManagement/ # 用户管理页面
+├── router/          # 路由配置
+└── utils/           # 工具函数
+```
+
+## 快速开始
+
+### 安装依赖
+
+```bash
+npm install
+```
+
+### 启动开发服务器
+
+```bash
+npm run dev
+```
+
+应用将在 [http://localhost:3000](http://localhost:3000) 运行。
+
+### 构建生产版本
+
+```bash
+npm run build
+```
+
+## 默认账号
+
+系统预设了以下账号用于测试：
+
+1. 管理员账号
+   - 用户名：admin
+   - 密码：admin123
+
+2. 普通用户账号
+   - 用户名：user
+   - 密码：user123
+
+## 部分功能截图
+
+1. 登录页面
+   ![登录页面](./screenshots/login.png)
+
+2. 控制台
+   ![控制台](./screenshots/dashboard.png)
+
+3. 用户管理
+   ![用户管理](./screenshots/user-management.png)
+
+## 注意事项
+
+- 本项目使用 Mock 数据模拟后端接口，实际使用时需要替换为真实的 API
+- 用户数据在浏览器刷新后会重置
+- 项目目前仅支持简体中文
+
+## 后续计划
+
+- [ ] 添加更多语言支持
+- [ ] 集成更多数据图表
+- [ ] 优化移动端适配
+- [ ] 添加黑暗模式支持
+- [ ] 集成实时消息通知
+
+## 许可证
+
+MIT
